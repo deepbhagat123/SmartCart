@@ -21,4 +21,8 @@ public class Product {
         this.price = price;
         this.stockQuantity = stockQuantity;
     }
+    @Override
+    public String toString(){
+        return name+ " | Price :" + price + " | StockQuantity :" + stockQuantity;
+    }
 }

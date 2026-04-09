@@ -11,9 +11,9 @@ public class Main {
 
 
 
-        System.out.println(tv.getName() +" | price: " + (int)tv.getPrice());
+        System.out.println(tv);
 
-        System.out.println(machine.getName() + " | Price: " + machine.getPrice());
+        System.out.println(machine);
 
     }
 }
