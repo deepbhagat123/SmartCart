@@ -4,10 +4,10 @@ public class Main {
 
 
     public static void main(String[] args) {
-        Electronics tv = new Electronics("samsung TV", 10000,500,12);
+        Product tv = new Electronics("samsung TV", 10000,500,12);
 
 
-        Electronics machine = new Electronics("Symphony",20000,400,24);
+        Product machine = new Electronics("Symphony",20000,400,24);
 
 
 
