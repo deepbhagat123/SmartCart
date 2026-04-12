@@ -1,6 +1,8 @@
+import com.smartcart.exception.ProductNotFoundException;
 import com.smartcart.model.Electronics;
 import com.smartcart.model.Product;
 import com.smartcart.model.Grocery;
+import com.smartcart.service.ProductService;
 
 import java.util.ArrayList;
 public class Main {
@@ -25,6 +27,34 @@ public class Main {
 
         Product first = products.get(0);
         System.out.println("first product | : " + first);
+
+        try {
+            Product p = products.get(10);
+        }catch (IndexOutOfBoundsException e){
+            System.out.println("Product Not found at the index ");
+        }
+
+
+        ProductService service = new ProductService();
+
+        service.addProduct(new Electronics("Samsung TV",10000,500,12));
+        service.addProduct(new Grocery("Amul Milk", 60,200, "2025-12-01"));
+
+        try{
+            Product p = service.getProductByIndex(0);
+            System.out.println(p);
+        } catch(ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
+
+        // try getting invalid product
+
+        try{
+            Product p = service.getProductByIndex(10);
+            System.out.println(p);
+        } catch(ProductNotFoundException e){
+            System.out.println(e.getMessage());
+        }
 
     }
 }
