@@ -56,5 +56,9 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
+        service.printAllProducts();
+        service.printElectronics();
+        service.printSortedByPrice();
+
     }
 }
